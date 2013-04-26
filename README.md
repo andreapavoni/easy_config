@@ -1,7 +1,7 @@
-# EasyConfig [![Build Status](https://secure.travis-ci.org/apeacox/easy_config.png)](http://travis-ci.org/apeacox/easy_config)
+# EasyConfig
 
-A simple gem to store custom app settings the easy way. It can be used in any
-application, but a Rails generator is provided too.
+A simple gem to store custom app settings the easiest way. It can be used in any
+Ruby *or* Rails application.
 
 ## Installation
 
@@ -9,28 +9,18 @@ Add this line to your application's Gemfile:
 
 ```gem 'easy_config'```
 
-And then execute:
+then execute:
 
 ```$ bundle install```
 
-Or install it yourself as:
+or install it yourself as:
 
-```$ gem install likes_tracker```
-
-## Rails support
-
-EasyConfig provides a generator to create an initializer in ```config/initializers/easy_config.rb``` and a sample config in ```config/easy_config.yml```.
-
-```rails generate easy_config:install```
-
-### Dependencies
-
-No dependencies, just plain Ruby and its standard library.
+```$ gem install easy_config```
 
 ## Usage
 
-EasyConfig loads a YAML file (with eventual ERB tags, so you can use ```ENV``` variables.
-Given a YAML file with a bunch of keys:
+EasyConfig loads a YAML file (with eventual ERB tags, so you can use ```ENV``` variables).
+For example, given a YAML file with a bunch of keys:
 
 ```
 foo:
@@ -43,23 +33,35 @@ foo:
 Here's how to use it:
 
 ```
-  # Load yaml file
-  MyConfig = EasyConfig.load_yaml 'path_to_yaml.yml'
+# Load yaml file
+MyConfig = EasyConfig.load_yaml 'path_to_yaml.yml'
 
-  # Retrieve keys
-  MyConfig.bar # => 1
-  MyConfig.env # => YOUR_USERNAME
+# Retrieve keys
+MyConfig.bar # => 1
+MyConfig.env # => YOUR_USERNAME
 
-  # Retuns a nested object
-  MyConfig.baz # => <#EasyConfig::DeepStruct>
+# Retuns a nested object (EasyConfig::DeepStruct is a modified version of Ruby's OpenStruct)
+MyConfig.baz # => <#EasyConfig::DeepStruct>
 
-  # Access a nested key
-  MyConfig.baz.nested # => 2
+# Access a nested key
+MyConfig.baz.nested # => 2
 
-  # Returns an Hash
-  MyConfig.baz.to_h # => {foo: {bar: 1, env: ..., baz: {nested: 2} }}
+# Returns an Hash
+MyConfig.to_h # => {foo: {bar: 1, env: ..., baz: {nested: 2} }}
 
 ```
+
+## Rails support
+
+EasyConfig has built-in support for Rails. It provides a generator to create an initializer and a sample config:
+
+* run the generator
+
+  ```rails generate easy_config:install```
+* edit the sample configuration in ```config/easy_config.yml```
+
+You might want to modify ```config/initializers/easy_config.rb``` to choose another name for the object that should store the settings.
+(default name is ```EConfig```), or add additional logic. No problem, this is just a *decent default* for the lazy.
 
 ## Contributing
 
