@@ -1,0 +1,4 @@
+test:
+  foo: <%= 'this is from ERB' %>
+  bar:
+    baz: 2
