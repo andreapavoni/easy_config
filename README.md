@@ -7,7 +7,7 @@ Ruby *or* Rails application.
 
 Add this line to your application's Gemfile:
 
-```gem 'easy_config'```
+```gem 'easy_configs'```
 
 then execute:
 
@@ -15,7 +15,7 @@ then execute:
 
 or install it yourself as:
 
-```$ gem install easy_config```
+```$ gem install easy_configs```
 
 ## Usage
 

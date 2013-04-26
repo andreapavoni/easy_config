@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    easy_config (0.0.3)
+    easy_configs (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -12,5 +12,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  easy_config!
+  easy_configs!
   rake
