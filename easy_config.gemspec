@@ -5,7 +5,7 @@ require "easy_config/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "easy_config"
+  s.name        = "easy_configs"
   s.description     = "Store Ruby or Rails app settings in the easiest way."
   s.summary = "Store custom Ruby or Rails app settings in the easiest way."
   s.version     = EasyConfig::VERSION
