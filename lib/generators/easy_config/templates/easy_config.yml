@@ -1,0 +1,16 @@
+# Set your configs here.
+
+development:
+  foo: 'example_dev'
+    bar:
+      baz: 1
+
+test:
+  foo: 'example_test'
+    bar:
+      baz: 1
+
+production:
+  foo: 'example_prod'
+    bar:
+      baz: 1
