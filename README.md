@@ -1,7 +1,7 @@
 # EasyConfig
 
 A simple gem to store custom app settings the easiest way. It can be used in any
-Ruby *or* Rails application.
+Ruby application (Rails included).
 
 ## Installation
 
